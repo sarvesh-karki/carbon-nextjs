@@ -136,7 +136,6 @@ function RepoPage() {
   if (error) {
     return `Error! ${error}`;
   }
-
   return (
     <Grid className="repo-page">
       <Column lg={16} md={8} sm={4} className="repo-page__r1">

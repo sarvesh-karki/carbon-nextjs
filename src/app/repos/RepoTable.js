@@ -36,12 +36,15 @@ const RepoTable = ({ rows, headers }) => {
           title="Carbon Repositories"
           description="A collection of public Carbon repositories."
         >
-          <Table {...getTableProps()}>
+          <Table {...getTableProps({})}>
             <TableHead>
               <TableRow>
                 <TableExpandHeader />
                 {headers.map((header) => (
-                  <TableHeader key={header.key} {...getHeaderProps({ header })}>
+                  <TableHeader
+                    key={header.key}
+                    {...getHeaderProps({ header, isSortable: true })}
+                  >
                     {header.header}
                   </TableHeader>
                 ))}
